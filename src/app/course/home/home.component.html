@@ -1,0 +1,7 @@
+<app-navbar (searchEvent)="search($event)"></app-navbar>>
+
+<div class="courses-container">
+  <div *ngFor="let course of courses">
+    <app-coursecard [course]="course"></app-coursecard>
+  </div>
+</div>

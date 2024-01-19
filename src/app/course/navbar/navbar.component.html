@@ -1,0 +1,15 @@
+<div class="navbar">
+  <h1 class="navbar-head">Courses</h1>
+  <div class="navbar-searchbox">
+    <input
+      class="navbar-searchfield"
+      type="text"
+      [(ngModel)]="searchField"
+      placeholder="Course name or start and end time"
+    />
+    <button class="navbar-searchbtn" (click)="search()">Search</button>
+  </div>
+  <div class="navbar-userbtns">
+    <button class="logout-btn" (click)="logout()">Logout</button>
+  </div>
+</div>

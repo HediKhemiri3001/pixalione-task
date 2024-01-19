@@ -1,0 +1,11 @@
+{
+  "users": [
+    { "firstname": "Hedi", "lastname": "khemiri" },
+    { "firstname": "Hedi", "lastname": "khemiri" }
+  ],
+  "courses": [
+    { "title": "C++" },
+    { "title": "Golang" },
+    { "title": "JavaScript" }
+  ]
+}

@@ -1,0 +1,18 @@
+{{ message }}
+<form (submit)="onSubmit()">
+  <label for="username">Username:</label>
+  <input
+    id="username"
+    type="text"
+    [(ngModel)]="credentials.username"
+    name="username"
+  />
+  <label for="password">Password:</label>
+  <input
+    id="password"
+    type="password"
+    [(ngModel)]="credentials.password"
+    name="password"
+  />
+  <button type="submit">Login</button>
+</form>
