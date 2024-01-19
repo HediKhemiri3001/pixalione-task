@@ -7,9 +7,10 @@
       [(ngModel)]="searchField"
       placeholder="Course name or start and end time"
     />
-    <button class="navbar-searchbtn" (click)="search()">Search</button>
+    <button class="button-30" (click)="search()">Search</button>
   </div>
   <div class="navbar-userbtns">
-    <button class="logout-btn" (click)="logout()">Logout</button>
+    <button class="button-30" [routerLink]="['/profile']">My profile</button>
+    <button class="button-30" (click)="logout()">Logout</button>
   </div>
 </div>

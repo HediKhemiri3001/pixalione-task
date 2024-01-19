@@ -1,0 +1,61 @@
+{{ message }}
+<form class="form" (submit)="onSubmit()" [formGroup]="addCourseForm">
+  <label>name:</label>
+  <input
+    type="text"
+    id="name"
+    class="form-control"
+    formControlName="name"
+    required
+  />
+
+  <label>description:</label>
+  <input
+    type="text"
+    id="description"
+    class="form-control"
+    formControlName="description"
+    required
+  />
+
+  <label>subject:</label>
+  <input
+    type="text"
+    id="subject"
+    class="form-control"
+    formControlName="subject"
+    required
+  />
+
+  <label>Start time:</label>
+  <input
+    type="start_time"
+    id="start_time"
+    class="form-control"
+    formControlName="start_time"
+    required
+  />
+
+  <label>End time:</label>
+  <input
+    type="text"
+    id="end_time"
+    class="form-control"
+    formControlName="end_time"
+    required
+  />
+
+  <label>Category:</label>
+  <div *ngFor="let category of categories">
+    <input
+      type="radio"
+      id="category"
+      class="form-control"
+      formControlName="category"
+      [value]="category"
+    />
+    <label>{{ category }}</label>
+  </div>
+
+  <button class="button-30" type="submit">Submit</button>
+</form>

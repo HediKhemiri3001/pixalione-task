@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 
+export const CATEGORIES = ['Tech', 'Marketing'];
+
 export interface Course {
   name: string;
   description: string;

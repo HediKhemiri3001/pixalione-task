@@ -23,7 +23,13 @@ export interface UserLogin {
   username: string;
   password: string;
 }
-
+export interface UserUpdate {
+  id: string;
+  firstname: string;
+  lastname: string;
+  birthday: string;
+  gender: Gender;
+}
 @Injectable({
   providedIn: 'root',
 })
@@ -68,5 +74,23 @@ export class AuthService {
   public logout(): boolean {
     localStorage.removeItem('user');
     return true;
+  }
+  public updateProfile(body: UserUpdate) {
+    let index = this.Users.findIndex((element) => element.id === body.id);
+    this.Users[index].firstname = body.firstname;
+    this.Users[index].lastname = body.lastname;
+    this.Users[index].birthday = body.birthday;
+    this.Users[index].gender = body.gender;
+    return true;
+  }
+  public getUserRole(): UserRole {
+    const userString = localStorage.getItem('user');
+    const user: User = JSON.parse(userString!);
+    return user.role!;
+  }
+  public getUser(): User {
+    const userString = localStorage.getItem('user');
+    const user: User = JSON.parse(userString!);
+    return user;
   }
 }

@@ -1,8 +1,10 @@
-<div class="course-card">
-  <h1 class="course-name">{{ course.name }}</h1>
-  <p class="course-description">{{ course.description }}</p>
-  <p>{{ course.subject }}</p>
-  <p>{{ course.category }}</p>
-  <p>From {{ course.start_time }} To {{ course.end_time }}</p>
-  <p>Currently {{ course.number_of_students }} are enrolled.</p>
+<div class="card">
+  <span>{{ course.name }}</span>
+  <p class="course-description">
+    {{ course.description }}<br />
+    {{ course.subject }}<br />
+    {{ course.category }}<br />
+    From {{ course.start_time }} To {{ course.end_time }}<br />
+    Currently {{ course.number_of_students }} are enrolled.
+  </p>
 </div>

@@ -1,1 +1,87 @@
 /* You can add global styles to this file, and also import other style files */
+$background_color: #FE7A36
+$text_color: #E9F6FF
+$background_color_blue: #3652AD
+
+
+body   
+    margin: 0
+.textbox-4 
+  width: 275px
+  height: 50px
+  border: 2px solid #0c48fa
+  font-size: 14px
+  padding: 10px 5px
+  color: #000
+  border-radius: 5px
+  background: #ffffff
+  outline: none
+
+.form-group-4 
+  position: relative
+  margin-bottom: 30px
+
+.form-label-4 
+  position: absolute
+  top: 50%
+  left: 2rem
+  transform: translateY(-50%)
+  font-size: 16px
+  color: #000
+  transition: all .25s linear
+  pointer-events: none
+
+.textbox-4:focus ~ .form-label-4,
+.textbox-4:not(:focus):valid ~ .form-label-4 
+  transform: translateY(50%)
+  top: -25%
+  left: 1rem
+  font-size: 17px
+  padding: 0 .3rem
+  background-color: white
+  color: #000
+
+
+.button-30 
+  align-items: center
+  appearance: none
+  background-color: #FCFCFD
+  border-radius: 4px
+  border-width: 0
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset
+  box-sizing: border-box
+  color: $background_color_blue
+  cursor: pointer
+  display: inline-flex
+  font-family: "JetBrains Mono",monospace
+  height: 48px
+  justify-content: center
+  line-height: 1
+  list-style: none
+  overflow: hidden
+  padding-left: 16px
+  padding-right: 16px
+  position: relative
+  text-align: left
+  text-decoration: none
+  transition: box-shadow .15s,transform .15s
+  user-select: none
+  -webkit-user-select: none
+  touch-action: manipulation
+  white-space: nowrap
+  will-change: box-shadow,transform
+  font-size: 18px
+
+
+.button-30:focus 
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset
+
+
+.button-30:hover 
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset
+  transform: translateY(-2px)
+
+
+.button-30:active 
+  box-shadow: #D6D6E7 0 3px 7px inset
+  transform: translateY(2px)

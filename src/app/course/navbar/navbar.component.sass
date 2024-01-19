@@ -1,7 +1,26 @@
+@import ../../../styles
+    
 .navbar 
     display: flex
     flex-direction: row
     align-items: center
     justify-content: space-between
     padding: 1em
-    background-color: blue
+    background-color: $background_color_blue
+
+
+.navbar-head
+    color: $text_color
+    font-size: 3em
+.navbar-searchbox, .navbar-userbtns
+    display: flex
+    gap: 2em
+.navbar-searchfield
+    height: 36px
+    width: 20em
+    border-radius: 5%
+    outline: none
+    padding: 0.3em
+.navbar-searchbtn, .logout-btn .profile-btn
+    width: 5em
+    cursor: pointer
