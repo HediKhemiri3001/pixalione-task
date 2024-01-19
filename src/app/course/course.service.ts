@@ -47,6 +47,7 @@ export class CourseService {
     return true;
   }
   searchCourse(keyword: string) {
+    if (keyword === '') return this.courses;
     const regExp = new RegExp(`/*.${keyword}.*`);
     return this.courses.filter(
       (element) =>

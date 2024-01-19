@@ -4,6 +4,7 @@ import { RegisterComponent } from './auth/register/register.component';
 import { HomeComponent } from './course/home/home.component';
 import { authGuard } from './auth/auth.guard';
 import { AddCourseComponent } from './course/add-course/add-course.component';
+import { ProfileComponent } from './auth/profile/profile.component';
 
 export const routes: Routes = [
   { title: 'Login', path: 'login', component: LoginComponent },
@@ -15,10 +16,17 @@ export const routes: Routes = [
     canActivate: [authGuard],
   },
   {
+    title: 'Profile',
+    path: 'profile',
+    component: ProfileComponent,
+    canActivate: [authGuard],
+  },
+  {
     title: 'Add course',
     path: 'add-course',
     component: AddCourseComponent,
     canActivate: [authGuard],
   },
+  { title: 'Landing page', path: '**', redirectTo: 'login' },
   //{ title: 'NOt Found', path: '**' },
 ];

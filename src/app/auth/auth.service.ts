@@ -43,7 +43,7 @@ export class AuthService {
       birthday: '30/01/2001',
       gender: Gender.MALE,
       role: UserRole.STUDENT,
-      id: 'uuid',
+      id: '123',
     },
     {
       firstname: 'Hedi Instructor',
@@ -53,7 +53,7 @@ export class AuthService {
       birthday: '30/01/2001',
       gender: Gender.MALE,
       role: UserRole.INSTRUCTOR,
-      id: 'uuid',
+      id: '456',
     },
   ];
   public login(body: UserLogin): boolean {
@@ -81,6 +81,9 @@ export class AuthService {
     this.Users[index].lastname = body.lastname;
     this.Users[index].birthday = body.birthday;
     this.Users[index].gender = body.gender;
+    localStorage.removeItem('user');
+    localStorage.setItem('user', JSON.stringify(this.Users[index]));
+    console.log(this.Users);
     return true;
   }
   public getUserRole(): UserRole {

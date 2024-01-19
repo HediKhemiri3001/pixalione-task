@@ -27,7 +27,6 @@ export class HomeComponent implements OnInit {
     this.isInstructor = this.role === UserRole.INSTRUCTOR;
   }
   search(keyword: string) {
-    if (keyword.length > 3)
-      this.courses = this.courseService.searchCourse(keyword);
+    this.courses = this.courseService.searchCourse(keyword);
   }
 }

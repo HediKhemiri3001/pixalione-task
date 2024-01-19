@@ -49,8 +49,11 @@ export class ProfileComponent {
   }
   onSubmit() {
     if (this.updateForm.valid) {
-      this.authService.register(this.updateForm.value);
-      this.router.navigate(['/login']);
+      this.authService.updateProfile({
+        ...this.updateForm.value,
+        id: this.user.id,
+      });
+      this.router.navigate(['/home']);
     }
   }
 }
