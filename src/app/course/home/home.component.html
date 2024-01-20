@@ -1,9 +1,11 @@
 <app-navbar (searchEvent)="search($event)"></app-navbar>
-<button class="button-30" *ngIf="isInstructor" [routerLink]="['/add-course']">
-  Create Course.
-</button>
-<div class="courses-container">
-  <div *ngFor="let course of courses">
-    <app-coursecard [course]="course"></app-coursecard>
+<div class="main-container">
+  <button class="button-30" *ngIf="isInstructor" [routerLink]="['/add-course']">
+    Create Course.
+  </button>
+  <div class="courses-container">
+    <div *ngFor="let course of courses">
+      <app-coursecard [course]="course"></app-coursecard>
+    </div>
   </div>
 </div>

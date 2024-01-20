@@ -7,7 +7,7 @@ import {
 } from '@angular/forms';
 import { AuthService } from '../../auth/auth.service';
 import { Router } from '@angular/router';
-import { CATEGORIES, Course } from '../course.service';
+import { CATEGORIES, Course, CourseService } from '../course.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -30,7 +30,7 @@ export class AddCourseComponent {
     end_time: '',
     number_of_students: 0,
   };
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(private courseService: CourseService, private router: Router) {}
   ngOnInit(): void {
     this.addCourseForm = new FormGroup({
       name: new FormControl(this.newCourse.name, [Validators.required]),
@@ -38,10 +38,7 @@ export class AddCourseComponent {
         Validators.required,
       ]),
       category: new FormControl(this.newCourse.category, [Validators.required]),
-      subject: new FormControl(this.newCourse.subject, [
-        Validators.required,
-        Validators.minLength(8),
-      ]),
+      subject: new FormControl(this.newCourse.subject, [Validators.required]),
       start_time: new FormControl(this.newCourse.start_time, [
         Validators.required,
       ]),
@@ -52,8 +49,10 @@ export class AddCourseComponent {
     });
   }
   onSubmit() {
+    console.log(this.addCourseForm.value, this.addCourseForm.valid);
+
     if (this.addCourseForm.valid) {
-      this.authService.register(this.addCourseForm.value);
+      this.courseService.addCourse(this.addCourseForm.value);
       this.router.navigate(['/home']);
     } else this.message = 'The form is invalid';
   }

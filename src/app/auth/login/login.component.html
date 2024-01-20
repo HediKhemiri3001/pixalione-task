@@ -1,18 +1,25 @@
 {{ message }}
-<form (submit)="onSubmit()">
-  <label for="username">Username:</label>
-  <input
-    id="username"
-    type="text"
-    [(ngModel)]="credentials.username"
-    name="username"
-  />
-  <label for="password">Password:</label>
-  <input
-    id="password"
-    type="password"
-    [(ngModel)]="credentials.password"
-    name="password"
-  />
-  <button type="submit">Login</button>
+<form class="form" (submit)="onSubmit()">
+  <div class="form-group-4">
+    <input
+      class="textbox-4"
+      id="username"
+      type="text"
+      [(ngModel)]="credentials.username"
+      name="username"
+    />
+    <label class="form-label-4" for="username">Username:</label>
+  </div>
+  <div class="form-group-4">
+    <input
+      class="textbox-4"
+      id="password"
+      type="password"
+      [(ngModel)]="credentials.password"
+      name="password"
+    />
+    <label class="form-label-4" for="password">Password:</label>
+  </div>
+
+  <button class="button-30" type="submit">Login</button>
 </form>

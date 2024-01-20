@@ -1,48 +1,55 @@
-<h1>Profile :</h1>
-<form class="form" (submit)="onSubmit()" [formGroup]="updateForm">
-  <div class="form-group-4">
-    <input
-      type="text"
-      id="firstname"
-      class="textbox-4"
-      formControlName="firstname"
-      required
-    />
-    <label class="form-label-4">Firstname:</label>
-  </div>
-  <div class="form-group-4">
-    <input
-      type="text"
-      id="lastname"
-      class="textbox-4"
-      formControlName="lastname"
-      required
-    />
-    <label class="form-label-4">Lastname:</label>
-  </div>
-
-  <div class="form-group-4">
-    <input
-      type="text"
-      id="birthday"
-      class="textbox-4"
-      formControlName="birthday"
-      required
-    />
-    <label class="form-label-4">Birthday:</label>
-  </div>
-
-  <div>
-    <label>Gender:</label>
-    <div>
-      <input type="radio" id="gender" formControlName="gender" value="MALE" />
-      <label form-label-4>Male</label>
+<div class="container">
+  <h1>Profile :</h1>
+  <form class="form" (submit)="onSubmit()" [formGroup]="updateForm">
+    <div class="form-group-4">
+      <input
+        type="text"
+        id="firstname"
+        class="textbox-4"
+        formControlName="firstname"
+        required
+      />
+      <label class="form-label-4">Firstname:</label>
     </div>
-    <div>
-      <input type="radio" id="gender" formControlName="gender" value="FEMALE" />
-      <label form-label-4>Female</label>
+    <div class="form-group-4">
+      <input
+        type="text"
+        id="lastname"
+        class="textbox-4"
+        formControlName="lastname"
+        required
+      />
+      <label class="form-label-4">Lastname:</label>
     </div>
-  </div>
 
-  <button class="button-30" type="submit">Submit</button>
-</form>
+    <div class="form-group-4">
+      <input
+        type="text"
+        id="birthday"
+        class="textbox-4"
+        formControlName="birthday"
+        required
+      />
+      <label class="form-label-4">Birthday:</label>
+    </div>
+
+    <div>
+      <label>Gender:</label>
+      <div>
+        <input type="radio" id="gender" formControlName="gender" value="MALE" />
+        <label form-label-4>Male</label>
+      </div>
+      <div>
+        <input
+          type="radio"
+          id="gender"
+          formControlName="gender"
+          value="FEMALE"
+        />
+        <label form-label-4>Female</label>
+      </div>
+    </div>
+
+    <button class="button-30" type="submit">Submit</button>
+  </form>
+</div>

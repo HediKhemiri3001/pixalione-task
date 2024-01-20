@@ -1,60 +1,75 @@
 {{ message }}
+<h1>Add a course:</h1>
 <form class="form" (submit)="onSubmit()" [formGroup]="addCourseForm">
-  <label>name:</label>
-  <input
-    type="text"
-    id="name"
-    class="form-control"
-    formControlName="name"
-    required
-  />
-
-  <label>description:</label>
-  <input
-    type="text"
-    id="description"
-    class="form-control"
-    formControlName="description"
-    required
-  />
-
-  <label>subject:</label>
-  <input
-    type="text"
-    id="subject"
-    class="form-control"
-    formControlName="subject"
-    required
-  />
-
-  <label>Start time:</label>
-  <input
-    type="start_time"
-    id="start_time"
-    class="form-control"
-    formControlName="start_time"
-    required
-  />
-
-  <label>End time:</label>
-  <input
-    type="text"
-    id="end_time"
-    class="form-control"
-    formControlName="end_time"
-    required
-  />
-
-  <label>Category:</label>
-  <div *ngFor="let category of categories">
+  <div class="form-group-4">
     <input
-      type="radio"
-      id="category"
-      class="form-control"
-      formControlName="category"
-      [value]="category"
+      class="textbox-4"
+      type="text"
+      id="name"
+      formControlName="name"
+      required
     />
-    <label>{{ category }}</label>
+    <label class="form-label-4">Name:</label>
+  </div>
+  <div class="form-group-4">
+    <input
+      class="textbox-4"
+      type="text"
+      id="description"
+      formControlName="description"
+      required
+    />
+    <label class="form-label-4">Description:</label>
+  </div>
+  <div class="form-group-4">
+    <input
+      class="textbox-4"
+      type="text"
+      id="subject"
+      formControlName="subject"
+      required
+    />
+    <label class="form-label-4">Subject:</label>
+  </div>
+  <div class="form-group-4">
+    <input
+      class="textbox-4"
+      type="start_time"
+      id="start_time"
+      formControlName="start_time"
+      required
+    />
+    <label class="form-label-4">Start time:</label>
+  </div>
+  <div class="form-group-4">
+    <input
+      class="textbox-4"
+      type="text"
+      id="end_time"
+      formControlName="end_time"
+      required
+    /><label class="form-label-4">End time:</label>
+  </div>
+  <div class="form-group-4">
+    <input
+      class="textbox-4"
+      type="number"
+      id="number_of_students"
+      formControlName="number_of_students"
+      required
+    /><label class="form-label-4">Number of students:</label>
+  </div>
+  <div>
+    <label>Category:</label>
+    <div *ngFor="let category of categories">
+      <input
+        type="radio"
+        id="category"
+        formControlName="category"
+        [value]="category"
+      />
+      <label>{{ category }}</label>
+    </div>
   </div>
 
   <button class="button-30" type="submit">Submit</button>

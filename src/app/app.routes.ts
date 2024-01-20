@@ -5,6 +5,7 @@ import { HomeComponent } from './course/home/home.component';
 import { authGuard } from './auth/auth.guard';
 import { AddCourseComponent } from './course/add-course/add-course.component';
 import { ProfileComponent } from './auth/profile/profile.component';
+import { instructorGuard } from './auth/instructor.guard';
 
 export const routes: Routes = [
   { title: 'Login', path: 'login', component: LoginComponent },
@@ -25,7 +26,7 @@ export const routes: Routes = [
     title: 'Add course',
     path: 'add-course',
     component: AddCourseComponent,
-    canActivate: [authGuard],
+    canActivate: [authGuard, instructorGuard],
   },
   { title: 'Landing page', path: '**', redirectTo: 'login' },
   //{ title: 'NOt Found', path: '**' },
