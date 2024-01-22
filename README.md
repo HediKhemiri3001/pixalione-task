@@ -25,3 +25,7 @@ I didn't add any third party dependencies so :
 should suffice when it comes to dependencies.
 
 and `ng serve` to test it.
+You can use the two users I hardcoded for testing:
+
+- Username: HediKH Password: something Role: Student
+- Username: HediKHInst Password: something Role: Instructor
